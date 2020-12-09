@@ -10,6 +10,9 @@
 
     myReset.addEventListener('click', function(){
         /* hier komt jouw code */
+        myText.innerHTML = "...........";
+        myImage.src = resetPlaatje[0];
+        sayItLoud("...........");
     })
 
     function main(){
@@ -29,9 +32,11 @@
     
     function makeThisSentence(){
         let index = randomizer(arrayLength);
+        let indextwo = randomizer(arrayLength);
+        let indexThree = randomizer(arrayLength);
         let woord1 = onderwerp[index];
-        let woord2 = werkwoord[index];
-        let woord3 = restwoord[index];
+        let woord2 = werkwoord[indextwo];
+        let woord3 = restwoord[indexThree];
         let outputString = woord1 + " " + woord2 + " " + woord3;
         return outputString;
     }
@@ -52,9 +57,13 @@
     
     
     
-    const onderwerp = ["she", "Ed", "Rosmerta"];
-    const werkwoord = ["walks", "learns", "drinks"];
-    const restwoord = ["hard", "at school", "coffee"];
+    const onderwerp = ["The cat", "The dog", "The bird", "The lizard"];
+    const werkwoord = ["tries to", "wants to", "fails to", "attempts to"];
+    const restwoord = ["sleep", "jump", "fly", "run"];
         
     let plaatjes = ["https://cdn.pixabay.com/photo/2018/07/09/17/44/baby-elephant-3526681__340.png", "https://www.how-to-draw-funny-cartoons.com/images/cartoon-baby-007.jpg", "https://thumbs.dreamstime.com/b/smiling-heart-cartoon-open-arms-nice-image-all-projects-love-representing-version-its-suggest-idea-40930153.jpg", "https://observer.com/wp-content/uploads/sites/2/2020/05/yoda-art-observer.jpg?quality=80"]
     let arrayLength = onderwerp.length;
+    let resetPlaatje = ["https://i.pinimg.com/originals/16/9a/8d/169a8dfcb402415d343481e7143f932c.jpg"]; 
+
+
+    
